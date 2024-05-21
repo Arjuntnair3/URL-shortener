@@ -1,0 +1,244 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 95%;
+    margin: auto;
+    background: #82a07f;
+    text-align: center;
+    padding: 40px 10px;
+}
+
+/* Heading */
+.heading {
+    font-size: 28px;
+    color: #2c1905;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.form {
+    padding: 20px 0;
+}
+
+.form input {
+    padding: 10px 15px;
+    width: calc(100% - 32px);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.form button {
+    border: 0;
+    outline: none;
+    background-color: #2a9d8f;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #48af92;
+}
+
+/* Table container */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+/* URL Table */
+#urlTable {
+    width: 100%;
+    color: #e2bb39;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+#urlTable th,
+#urlTable td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+#urlTable th {
+    background-color: #cc9669;
+    color: #e40c0c;
+}
+
+#urlTable tbody tr:nth-child(even) {
+    background-color: #3a566d;
+}
+
+#urlTable tbody tr:nth-child(odd) {
+    background-color: #5c3c53;
+}
+
+/* Link styles */
+a {
+    color: rgb(179, 214, 20);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #f4a261;
+}
+
+/* DataTable styles */
+
+
+.dt-search {
+    color: #c9db64;
+}
+
+
+
+
+.dt-paging-button {
+    background-color: #913979;
+}
+
+.dt-column-title {
+    color: #853878;
+}
+.table-container{
+    background-color: #b87556;
+
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+/* 
+.page-link {
+    display: block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+} */
+.page-link{
+    text-decoration: none;
+}
+.page-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+.center {
+    text-align: center;
+}
+.page-link.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #urlTable th,
+    #urlTable td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px; /* Reduce font size for small screens */
+        padding: 8px;
+    }
+
+    #urlTable {
+        display: block;
+        overflow-x: auto;
+        margin: auto; /* Center the table */
+    }
+
+    #urlTable thead,
+    #urlTable tbody,
+    #urlTable th,
+    #urlTable td,
+    #urlTable tr {
+        display: block;
+    }
+
+    #urlTable tr {
+        border-bottom: 1px solid #ddd;
+    }
+
+    #urlTable td {
+        text-align: center; /* Center align for small screens */
+        padding-left: 0; /* Remove left padding */
+        position: relative;
+    }
+
+    #urlTable td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 10px);
+        text-align: left;
+        font-weight: bold;
+    }
+
+    #urlTable th,
+    #urlTable td {
+        border: none;
+    }
+
+    #urlTable th {
+        display: none;
+    }
+
+    #urlTable td {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .form input,
+    .form button {
+        width: 100%; /* Make form elements full width on smaller screens */
+    }
+
+    /* Centering DataTable elements */
+    .dt-search,
+    .dt-paging-button,
+    .dt-column-title {
+        margin: auto;
+        text-align: center;
+    }
+    
+    /* Centering edit and delete buttons */
+    #urlTable td a {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Centering the edit and delete symbols */
+    .dt-layout-cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .material-symbolsAS  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
